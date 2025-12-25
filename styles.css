@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#heli {
+  position: absolute;
+  transform-origin: center center;
+  z-index: 10;
+}
+
+#heli img {
+  display: block;
+  pointer-events: none;
+}
+
+#heli img[alt="rotor"] {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: spin 0.1s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+#heli img[alt="Helicopter"] {
+  width: 150px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+audio {
+  display: none;
+  volume: 9.5;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: translateX(calc(-50% - 10px));
+  }
+  50% {
+    transform: translateX(calc(-50% + 10px));
+  }
+}
+
+/* Instructions */
+#instructions {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  pointer-events: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 30px;
+  border-radius: 10px;
+}

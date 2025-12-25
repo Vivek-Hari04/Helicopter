@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helicopter Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="bg-music" autoplay loop preload="auto">
+      <source src="helicopter_helicopter.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="background">
+      <video id="bg-video" autoplay muted loop src="background.mp4"></video>
+      <div id="heli">
+        <img src="rotor.svg" alt="rotor" />
+        <img src="helic.svg" alt="Helicopter" />
+      </div>
+    </div>
+    <div id="instructions">Use Arrow Keys to Fly</div>
+    <script src="script.js"></script>
+  </body>
+</html>
